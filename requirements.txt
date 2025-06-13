@@ -4,3 +4,5 @@ langchain-openai
 langchain-chroma
 pandas
 pyyaml
+chromadb==0.4.24
+protobuf==3.20.3
