@@ -7,3 +7,4 @@ pyyaml
 chromadb==0.4.24
 protobuf==3.20.3
 numpy==1.26.4
+pysqlite3-binary
