@@ -2,5 +2,13 @@ streamlit
 langchain
 langchain-openai
 langchain-chroma
+langchain-community
 pandas
 pyyaml
+chromadb==0.4.24
+protobuf==3.20.3
+numpy==1.26.4
+pysqlite3-binary
+# Add these for your local scripts
+beautifulsoup4
+playwright
