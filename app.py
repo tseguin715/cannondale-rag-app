@@ -1,3 +1,10 @@
+# At the VERY TOP of app.py
+import sys
+
+# This is the "magic" fix for the sqlite3 issue on Streamlit Cloud
+__import__('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import streamlit as st
 import yaml
 import os
