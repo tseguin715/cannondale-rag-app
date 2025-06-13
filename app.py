@@ -126,11 +126,21 @@ def display_response_with_images(response_text):
     
     for i, part in enumerate(parts):
         # Even-indexed parts are text, odd-indexed parts are URLs
+
         if i % 2 == 1:
-            # This is a URL, display the image
-            with st.spinner("Loading image..."):
-                # **MODIFICATION 4: Corrected the deprecated parameter**
-                st.image(part, use_container_width=True)
+            # This part is SUPPOSED to be a URL. Let's check.
+            # If it's a valid web link, display the image.
+            if part.strip().startswith(('http://', 'https://')):
+                with st.spinner("Loading image..."):
+                    st.image(part.strip(), use_container_width=True)
+            # Otherwise, it's just text that got caught by mistake. Print it.
+            else:
+                if part:
+                    st.write(f"_[Image: {part}]_") # Display it as text instead
+        
+        
+        
+        
         else:
             # This is plain text, display it if it's not empty
             if part:
