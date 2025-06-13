@@ -1,0 +1,10 @@
+# Ignore credentials file
+credentials.yml
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folders
+.venv/
+venv/
